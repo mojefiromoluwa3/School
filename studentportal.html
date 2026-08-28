@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Greenfield Academy Student Portal">
+
+    <title>Student Portal | WordSmith Academy</title>
+
+    <link rel="stylesheet" href="studentportal.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         MOBILE OVERLAY
+    ========================== -->
+    <div class="overlay" id="overlay"></div>
+
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+
+            <div class="school-logo">
+                GA
+            </div>
+
+            <div>
+                <h2>Greenfield</h2>
+                <span>Student Portal</span>
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+        <nav class="sidebar-nav">
+
+            <a href="#dashboard" class="nav-link active">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="#profile" class="nav-link">
+                <span>👤</span>
+                My Profile
+            </a>
+
+            <a href="#results" class="nav-link">
+                <span>📊</span>
+                Results
+            </a>
+
+            <a href="#attendance" class="nav-link">
+                <span>✓</span>
+                Attendance
+            </a>
+
+            <a href="#assignments" class="nav-link">
+                <span>📝</span>
+                Assignments
+            </a>
+
+            <a href="#timetable" class="nav-link">
+                <span>📅</span>
+                Timetable
+            </a>
+
+            <a href="#fees" class="nav-link">
+                <span>💳</span>
+                School Fees
+            </a>
+
+            <a href="#announcements" class="nav-link">
+                <span>🔔</span>
+                Announcements
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar Bottom -->
+        <div class="sidebar-bottom">
+
+            <a href="#settings" class="nav-link">
+                <span>⚙</span>
+                Settings
+            </a>
+
+            <button class="logout-btn" id="logoutBtn">
+                <span>↪</span>
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+    <main class="main-content">
+
+        <!-- Top Header -->
+        <header class="top-header">
+
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                ☰
+            </button>
+
+
+            <div class="header-title">
+                <h1>Student Portal</h1>
+                <p>2026/2027 Academic Session</p>
+            </div>
+
+
+            <div class="header-right">
+
+                <button class="notification-btn" id="notificationBtn">
+                    🔔
+                    <span class="notification-count">3</span>
+                </button>
+
+                <div class="student-mini-profile">
+
+                    <div class="avatar">
+                        AO
+                    </div>
+
+                    <div>
+                        <strong>Alex Okafor</strong>
+                        <small>STU/2026/001</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+             DASHBOARD
+        ========================== -->
+        <section class="page-section" id="dashboard">
+
+            <div class="welcome-banner">
+
+                <div>
+                    <span>WELCOME BACK 👋</span>
+
+                    <h2>Hello, Alex!</h2>
+
+                    <p>
+                        Here's an overview of your academic activities
+                        and school information.
+                    </p>
+                </div>
+
+                <div class="banner-icon">
+                    🎓
+                </div>
+
+            </div>
+
+
+            <!-- Statistics -->
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        📚
+                    </div>
+
+                    <div>
+                        <span>Total Subjects</span>
+                        <strong>10</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        ✓
+                    </div>
+
+                    <div>
+                        <span>Attendance</span>
+                        <strong>94%</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon yellow">
+                        ⭐
+                    </div>
+
+                    <div>
+                        <span>Current GPA</span>
+                        <strong>4.32</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon red">
+                        📝
+                    </div>
+
+                    <div>
+                        <span>Assignments</span>
+                        <strong>3</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+
+                <!-- Announcements -->
+                <div class="dashboard-card">
+
+                    <div class="card-heading">
+                        <div>
+                            <span class="card-label">
+                                SCHOOL NEWS
+                            </span>
+
+                            <h3>Latest Announcements</h3>
+                        </div>
+
+                        <a href="#announcements">
+                            View All
+                        </a>
+                    </div>
+
+
+                    <div class="announcement-item">
+
+                        <div class="announcement-icon">
+                            📢
+                        </div>
+
+                        <div>
+                            <h4>Resumption for New Session</h4>
+
+                            <p>
+                                Students are expected to resume for
+                                the 2026/2027 academic session.
+                            </p>
+
+                            <small>
+                                August 25, 2026
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="announcement-item">
+
+                        <div class="announcement-icon">
+                            📅
+                        </div>
+
+                        <div>
+                            <h4>Parents' Orientation</h4>
+
+                            <p>
+                                The parents' orientation programme
+                                will hold this September.
+                            </p>
+
+                            <small>
+                                August 20, 2026
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="announcement-item">
+
+                        <div class="announcement-icon">
+                            🏆
+                        </div>
+
+                        <div>
+                            <h4>Inter-House Sports</h4>
+
+                            <p>
+                                Students should prepare for the
+                                upcoming sports competition.
+                            </p>
+
+                            <small>
+                                August 15, 2026
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Today's Classes -->
+                <div class="dashboard-card">
+
+                    <div class="card-heading">
+
+                        <div>
+                            <span class="card-label">
+                                TODAY
+                            </span>
+
+                            <h3>Today's Classes</h3>
+                        </div>
+
+                        <a href="#timetable">
+                            Full Timetable
+                        </a>
+
+                    </div>
+
+
+                    <div class="class-item">
+
+                        <div class="class-time">
+                            8:00
+                            <small>AM</small>
+                        </div>
+
+                        <div class="class-info">
+                            <strong>Mathematics</strong>
+                            <span>Room 12 • Mr. Johnson</span>
+                        </div>
+
+                        <span class="class-status">
+                            Completed
+                        </span>
+
+                    </div>
+
+
+                    <div class="class-item">
+
+                        <div class="class-time">
+                            9:00
+                            <small>AM</small>
+                        </div>
+
+                        <div class="class-info">
+                            <strong>English Language</strong>
+                            <span>Room 12 • Mrs. Williams</span>
+                        </div>
+
+                        <span class="class-status current">
+                            Current
+                        </span>
+
+                    </div>
+
+
+                    <div class="class-item">
+
+                        <div class="class-time">
+                            10:30
+                            <small>AM</small>
+                        </div>
+
+                        <div class="class-info">
+                            <strong>Physics</strong>
+                            <span>Laboratory • Mr. Adams</span>
+                        </div>
+
+                        <span class="class-status upcoming">
+                            Upcoming
+                        </span>
+
+                    </div>
+
+
+                    <div class="class-item">
+
+                        <div class="class-time">
+                            12:00
+                            <small>PM</small>
+                        </div>
+
+                        <div class="class-info">
+                            <strong>Computer Science</strong>
+                            <span>ICT Lab • Mrs. Peter</span>
+                        </div>
+
+                        <span class="class-status upcoming">
+                            Upcoming
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROFILE
+        ========================== -->
+        <section class="page-section" id="profile">
+
+            <div class="section-title">
+                <span>STUDENT INFORMATION</span>
+                <h2>My Profile</h2>
+            </div>
+
+            <div class="profile-card">
+
+                <div class="profile-header">
+
+                    <div class="large-avatar">
+                        AO
+                    </div>
+
+                    <div>
+                        <h2>Alex Okafor</h2>
+                        <p>Student ID: STU/2026/001</p>
+                        <span class="active-badge">
+                            Active Student
+                        </span>
+                    </div>
+
+                    <button class="edit-btn">
+                        Edit Profile
+                    </button>
+
+                </div>
+
+
+                <div class="profile-details">
+
+                    <div>
+                        <span>Full Name</span>
+                        <strong>Alex Okafor</strong>
+                    </div>
+
+                    <div>
+                        <span>Student ID</span>
+                        <strong>STU/2026/001</strong>
+                    </div>
+
+                    <div>
+                        <span>Class</span>
+                        <strong>SS 2A</strong>
+                    </div>
+
+                    <div>
+                        <span>Department</span>
+                        <strong>Science</strong>
+                    </div>
+
+                    <div>
+                        <span>Email</span>
+                        <strong>alex.okafor@example.com</strong>
+                    </div>
+
+                    <div>
+                        <span>Phone</span>
+                        <strong>+234 801 234 5678</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RESULTS
+        ========================== -->
+        <section class="page-section" id="results">
+
+            <div class="section-title">
+                <span>ACADEMIC PERFORMANCE</span>
+                <h2>Academic Results</h2>
+            </div>
+
+
+            <div class="result-summary">
+
+                <div>
+                    <span>Current GPA</span>
+                    <strong>4.32</strong>
+                </div>
+
+                <div>
+                    <span>Class Position</span>
+                    <strong>5th</strong>
+                </div>
+
+                <div>
+                    <span>Subjects</span>
+                    <strong>10</strong>
+                </div>
+
+                <div>
+                    <span>Overall Average</span>
+                    <strong>86%</strong>
+                </div>
+
+            </div>
+
+
+            <div class="table-card">
+
+                <div class="table-header">
+                    <h3>First Term Results</h3>
+
+                    <button class="download-btn" onclick="window.print()">
+                        Print Result
+                    </button>
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>CA</th>
+                                <th>Exam</th>
+                                <th>Total</th>
+                                <th>Grade</th>
+                                <th>Remark</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Mathematics</td>
+                                <td>28</td>
+                                <td>68</td>
+                                <td>96</td>
+                                <td><b>A1</b></td>
+                                <td>Excellent</td>
+                            </tr>
+
+                            <tr>
+                                <td>English Language</td>
+                                <td>27</td>
+                                <td>64</td>
+                                <td>91</td>
+                                <td><b>A1</b></td>
+                                <td>Excellent</td>
+                            </tr>
+
+                            <tr>
+                                <td>Physics</td>
+                                <td>25</td>
+                                <td>60</td>
+                                <td>85</td>
+                                <td><b>A1</b></td>
+                                <td>Very Good</td>
+                            </tr>
+
+                            <tr>
+                                <td>Chemistry</td>
+                                <td>24</td>
+                                <td>59</td>
+                                <td>83</td>
+                                <td><b>A1</b></td>
+                                <td>Very Good</td>
+                            </tr>
+
+                            <tr>
+                                <td>Biology</td>
+                                <td>26</td>
+                                <td>58</td>
+                                <td>84</td>
+                                <td><b>A1</b></td>
+                                <td>Very Good</td>
+                            </tr>
+
+                            <tr>
+                                <td>Computer Science</td>
+                                <td>29</td>
+                                <td>65</td>
+                                <td>94</td>
+                                <td><b>A1</b></td>
+                                <td>Excellent</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ATTENDANCE
+        ========================== -->
+        <section class="page-section" id="attendance">
+
+            <div class="section-title">
+                <span>STUDENT ATTENDANCE</span>
+                <h2>Attendance Record</h2>
+            </div>
+
+
+            <div class="attendance-card">
+
+                <div class="attendance-circle">
+                    <strong>94%</strong>
+                    <span>Present</span>
+                </div>
+
+                <div class="attendance-info">
+
+                    <div>
+                        <span>Total School Days</span>
+                        <strong>120</strong>
+                    </div>
+
+                    <div>
+                        <span>Days Present</span>
+                        <strong>113</strong>
+                    </div>
+
+                    <div>
+                        <span>Days Absent</span>
+                        <strong>7</strong>
+                    </div>
+
+                    <div>
+                        <span>Attendance Status</span>
+                        <strong class="good">
+                            Excellent
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ASSIGNMENTS
+        ========================== -->
+        <section class="page-section" id="assignments">
+
+            <div class="section-title">
+                <span>ACADEMIC TASKS</span>
+                <h2>Assignments</h2>
+            </div>
+
+
+            <div class="assignment-list">
+
+                <div class="assignment-card">
+
+                    <div class="assignment-icon">
+                        📐
+                    </div>
+
+                    <div class="assignment-content">
+                        <h3>Mathematics Assignment</h3>
+                        <p>Complete Algebra exercises 1–20.</p>
+                        <small>Due: September 5, 2026</small>
+                    </div>
+
+                    <span class="assignment-status pending">
+                        Pending
+                    </span>
+
+                </div>
+
+
+                <div class="assignment-card">
+
+                    <div class="assignment-icon">
+                        ⚗
+                    </div>
+
+                    <div class="assignment-content">
+                        <h3>Chemistry Assignment</h3>
+                        <p>Write a report on chemical reactions.</p>
+                        <small>Due: September 8, 2026</small>
+                    </div>
+
+                    <span class="assignment-status pending">
+                        Pending
+                    </span>
+
+                </div>
+
+
+                <div class="assignment-card">
+
+                    <div class="assignment-icon">
+                        💻
+                    </div>
+
+                    <div class="assignment-content">
+                        <h3>Computer Science Project</h3>
+                        <p>Create a simple HTML school webpage.</p>
+                        <small>Due: September 12, 2026</small>
+                    </div>
+
+                    <span class="assignment-status submitted">
+                        Submitted
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TIMETABLE
+        ========================== -->
+        <section class="page-section" id="timetable">
+
+            <div class="section-title">
+                <span>CLASS SCHEDULE</span>
+                <h2>Weekly Timetable</h2>
+            </div>
+
+
+            <div class="table-card">
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>8:00 - 9:00</td>
+                                <td>Mathematics</td>
+                                <td>Physics</td>
+                                <td>English</td>
+                                <td>Biology</td>
+                                <td>Chemistry</td>
+                            </tr>
+
+                            <tr>
+                                <td>9:00 - 10:00</td>
+                                <td>English</td>
+                                <td>Mathematics</td>
+                                <td>Chemistry</td>
+                                <td>Physics</td>
+                                <td>ICT</td>
+                            </tr>
+
+                            <tr>
+                                <td>10:30 - 11:30</td>
+                                <td>Physics</td>
+                                <td>Biology</td>
+                                <td>Mathematics</td>
+                                <td>English</td>
+                                <td>Economics</td>
+                            </tr>
+
+                            <tr>
+                                <td>12:00 - 1:00</td>
+                                <td>ICT</td>
+                                <td>Chemistry</td>
+                                <td>Biology</td>
+                                <td>Mathematics</td>
+                                <td>English</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SCHOOL FEES
+        ========================== -->
+        <section class="page-section" id="fees">
+
+            <div class="section-title">
+                <span>FINANCIAL INFORMATION</span>
+                <h2>School Fees</h2>
+            </div>
+
+
+            <div class="fee-card">
+
+                <div class="fee-header">
+                    <div>
+                        <span>2026/2027 SESSION</span>
+                        <h3>First Term School Fees</h3>
+                    </div>
+
+                    <span class="fee-status">
+                        Partially Paid
+                    </span>
+                </div>
+
+
+                <div class="fee-details">
+
+                    <div>
+                        <span>Total Fees</span>
+                        <strong>₦350,000</strong>
+                    </div>
+
+                    <div>
+                        <span>Amount Paid</span>
+                        <strong>₦250,000</strong>
+                    </div>
+
+                    <div>
+                        <span>Balance</span>
+                        <strong class="balance">
+                            ₦100,000
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="fee-progress">
+
+                    <div class="progress-label">
+                        <span>Payment Progress</span>
+                        <strong>71%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <span></span>
+                    </div>
+
+                </div>
+
+
+                <button class="pay-btn" onclick="alert('Online payment gateway will be connected here.')">
+                    Pay Outstanding Balance
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ANNOUNCEMENTS
+        ========================== -->
+        <section class="page-section" id="announcements">
+
+            <div class="section-title">
+                <span>SCHOOL INFORMATION</span>
+                <h2>Announcements</h2>
+            </div>
+
+
+            <div class="announcement-full-list">
+
+                <article>
+                    <span class="announcement-category">
+                        ACADEMIC
+                    </span>
+
+                    <h3>
+                        Resumption for 2026/2027 Session
+                    </h3>
+
+                    <p>
+                        Students are expected to resume for the
+                        2026/2027 academic session. All students
+                        should report to their respective classrooms.
+                    </p>
+
+                    <small>
+                        August 25, 2026
+                    </small>
+                </article>
+
+
+                <article>
+                    <span class="announcement-category">
+                        EVENT
+                    </span>
+
+                    <h3>
+                        Parents' Orientation Programme
+                    </h3>
+
+                    <p>
+                        The school will hold an orientation programme
+                        for parents and guardians of new students.
+                    </p>
+
+                    <small>
+                        August 20, 2026
+                    </small>
+                </article>
+
+
+                <article>
+                    <span class="announcement-category">
+                        SPORTS
+                    </span>
+
+                    <h3>
+                        Inter-House Sports Competition
+                    </h3>
+
+                    <p>
+                        Students are encouraged to participate actively
+                        in the upcoming inter-house sports competition.
+                    </p>
+
+                    <small>
+                        August 15, 2026
+                    </small>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="portal-footer">
+
+            <p>
+                © 2026 Greenfield Academy.
+                All Rights Reserved.
+            </p>
+
+            <p>
+                Student Portal • 2026/2027 Academic Session
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+    <script>
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const sidebar =
+            document.getElementById("sidebar");
+
+        const overlay =
+            document.getElementById("overlay");
+
+        const logoutBtn =
+            document.getElementById("logoutBtn");
+
+        const notificationBtn =
+            document.getElementById("notificationBtn");
+
+
+        /* Open mobile sidebar */
+
+        menuBtn.addEventListener("click", function () {
+
+            sidebar.classList.add("show");
+
+            overlay.classList.add("show");
+
+        });
+
+
+        /* Close mobile sidebar */
+
+        overlay.addEventListener("click", function () {
+
+            sidebar.classList.remove("show");
+
+            overlay.classList.remove("show");
+
+        });
+
+
+        /* Navigation */
+
+        const navLinks =
+            document.querySelectorAll(".nav-link");
+
+
+        navLinks.forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                navLinks.forEach(function (item) {
+                    item.classList.remove("active");
+                });
+
+                if (link.tagName === "A") {
+                    link.classList.add("active");
+                }
+
+                sidebar.classList.remove("show");
+                overlay.classList.remove("show");
+
+            });
+
+        });
+
+
+        /* Notification */
+
+        notificationBtn.addEventListener("click", function () {
+
+            alert(
+                "You have 3 new school notifications."
+            );
+
+        });
+
+
+        /* Logout */
+
+        logoutBtn.addEventListener("click", function () {
+
+            const confirmLogout =
+                confirm(
+                    "Are you sure you want to logout?"
+                );
+
+            if (confirmLogout) {
+
+                window.location.href =
+                    "login.html";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
