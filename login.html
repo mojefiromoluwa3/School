@@ -20,7 +20,7 @@
             <div class="school-logo">WS</div>
 
             <h1>WordSmith
-                 Academy</h1>
+                Academy</h1>
 
             <p class="motto">
                 Knowledge • Character • Excellence
@@ -182,7 +182,6 @@
 
         /* Login */
         loginForm.addEventListener("submit", function (event) {
-
             event.preventDefault();
 
             const studentIdValue = studentId.value.trim();
@@ -191,20 +190,17 @@
             loginMessage.className = "login-message";
             loginMessage.textContent = "";
 
-
             if (studentIdValue === "") {
                 showMessage("Please enter your student ID.", "error");
                 studentId.focus();
                 return;
             }
 
-
             if (passwordValue === "") {
                 showMessage("Please enter your password.", "error");
                 password.focus();
                 return;
             }
-
 
             if (passwordValue.length < 6) {
                 showMessage(
@@ -215,40 +211,45 @@
                 return;
             }
 
-
-            /* Loading state */
+            // Show loading state
             loginButton.disabled = true;
             buttonText.textContent = "Signing in...";
 
+            // Redirect to Student Portal
+            setTimeout(function () {
+                window.location.href = "student-portal.html";
+            }, 1000);
+        });
+
+
+        /*
+            DEMO LOGIN
+
+            For a real school system, this section should send
+            the student's credentials to a backend such as
+            Spring Boot, PHP, Node.js, etc.
+
+            Example:
+            fetch("/api/students/login", {...})
+        */
+
+        setTimeout(function () {
+
+            loginButton.enabled = true;
+            buttonText.textContent = "Login to Portal";
+
+            showMessage(
+                "Login successful. Welcome to the Student Portal!",
+                "success"
+            );
 
             /*
-                DEMO LOGIN
+                After connecting a real backend, redirect here:
 
-                For a real school system, this section should send
-                the student's credentials to a backend such as
-                Spring Boot, PHP, Node.js, etc.
-
-                Example:
-                fetch("/api/students/login", {...})
+                window.location.href = "student-dashboard.html";
             */
 
-            setTimeout(function () {
-
-                loginButton;
-                buttonText.textContent = "Login to Portal";
-
-                showMessage(
-                    "Login successful. Welcome to the Student Portal!",
-                    "success"
-                );
-
-                /*
-                    After connecting a real backend, redirect here:
-
-                    window.location.href = "student-dashboard.html";
-                */
-
-            }, 1200);
+        }, 1200);
 
         });
 
@@ -289,4 +290,3 @@
 </body>
 
 </html>
-
