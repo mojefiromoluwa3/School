@@ -156,135 +156,45 @@
 
 
     <script>
-        const loginForm = document.getElementById("loginForm");
-        const studentId = document.getElementById("studentId");
-        const password = document.getElementById("password");
-        const loginMessage = document.getElementById("loginMessage");
-        const loginButton = document.getElementById("loginButton");
-        const buttonText = document.getElementById("buttonText");
-        const togglePassword = document.getElementById("togglePassword");
-        const forgotPassword = document.getElementById("forgotPassword");
+    loginForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
+        const studentIdValue = studentId.value.trim();
+        const passwordValue = password.value.trim();
 
-        /* Show / Hide Password */
-        togglePassword.addEventListener("click", function () {
+        loginMessage.className = "login-message";
+        loginMessage.textContent = "";
 
-            if (password.type === "password") {
-                password.type = "text";
-                togglePassword.textContent = "Hide";
-            } else {
-                password.type = "password";
-                togglePassword.textContent = "Show";
-            }
-
-        });
-
-
-        /* Login */
-        loginForm.addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            const studentIdValue = studentId.value.trim();
-            const passwordValue = password.value.trim();
-
-            loginMessage.className = "login-message";
-            loginMessage.textContent = "";
-
-            if (studentIdValue === "") {
-                showMessage("Please enter your student ID.", "error");
-                studentId.focus();
-                return;
-            }
-
-            if (passwordValue === "") {
-                showMessage("Please enter your password.", "error");
-                password.focus();
-                return;
-            }
-
-            if (passwordValue.length < 6) {
-                showMessage(
-                    "Password must contain at least 6 characters.",
-                    "error"
-                );
-                password.focus();
-                return;
-            }
-
-            // Show loading state
-            loginButton.disabled = true;
-            buttonText.textContent = "Signing in...";
-
-            // Redirect to Student Portal
-            setTimeout(function () {
-                window.location.href = "student-portal.html";
-            }, 1000);
-        });
-
-
-        /*
-            DEMO LOGIN
-
-            For a real school system, this section should send
-            the student's credentials to a backend such as
-            Spring Boot, PHP, Node.js, etc.
-
-            Example:
-            fetch("/api/students/login", {...})
-        */
-
-        setTimeout(function () {
-
-            loginButton.enabled = true;
-            buttonText.textContent = "Login to Portal";
-
-            showMessage(
-                "Login successful. Welcome to the Student Portal!",
-                "success"
-            );
-
-            /*
-                After connecting a real backend, redirect here:
-
-                window.location.href = "student-dashboard.html";
-            */
-
-        }, 1200);
-
-        });
-
-
-        /* Forgot Password */
-        forgotPassword.addEventListener("click", function (event) {
-
-            event.preventDefault();
-
-            const id = studentId.value.trim();
-
-            if (id === "") {
-                showMessage(
-                    "Enter your Student ID first to reset your password.",
-                    "error"
-                );
-                studentId.focus();
-                return;
-            }
-
-            showMessage(
-                "Password reset instructions will be sent to your registered email.",
-                "success"
-            );
-
-        });
-
-
-        /* Display message */
-        function showMessage(message, type) {
-
-            loginMessage.textContent = message;
-            loginMessage.className = "login-message " + type;
-
+        if (studentIdValue === "") {
+            showMessage("Please enter your student ID.", "error");
+            studentId.focus();
+            return;
         }
+
+        if (passwordValue === "") {
+            showMessage("Please enter your password.", "error");
+            password.focus();
+            return;
+        }
+
+        if (passwordValue.length < 6) {
+            showMessage(
+                "Password must contain at least 6 characters.",
+                "error"
+            );
+            password.focus();
+            return;
+        }
+
+        // Show loading state
+        loginButton.disabled = true;
+        buttonText.textContent = "Signing in...";
+
+        // Redirect to Student Portal
+        setTimeout(function () {
+            window.location.href = "studentportal.html";
+        }, 1000);
+    });
     </script>
 
 </body>
