@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordsmith Academy | Entry Application</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="index.html" class="brand">
+            <span class="logo">WDS</span>
+            <span>
+                <strong>WORDSMITH</strong>
+                <small>ACADEMY</small>
+            </span>
+        </a>
+
+        <nav>
+            <a href="#application">Admissions</a>
+            <a href="#requirements">Requirements</a>
+            <a href="create-account.html" class="navbtn">
+                Create Application Account
+            </a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="intro">
+            <span class="eyebrow">ADMISSIONS • 2026/2027 SESSION</span>
+            <h1>Start your journey at <em>Wordsmith Academy.</em></h1>
+            <p>
+                Complete the entry application form below with accurate
+                information. You can create an application account after
+                submitting the form.
+            </p>
+
+            <div class="steps">
+                <span class="current">1 <b>Application Form</b></span>
+                <span>2 <b>Create Account</b></span>
+                <span>3 <b>Review</b></span>
+            </div>
+        </section>
+
+        <section class="form-card" id="application">
+
+            <div class="form-heading">
+                <div>
+                    <span class="eyebrow">NEW STUDENT ADMISSION</span>
+                    <h2>Entry Application Form</h2>
+                </div>
+                <small><i>*</i> Required fields</small>
+            </div>
+
+            <form id="applicationForm" novalidate>
+
+                <h3><b>01</b> Applicant Information</h3>
+
+                <div class="form-grid">
+
+                    <label>
+                        First Name <i>*</i>
+                        <input type="text" name="firstName" placeholder="Enter first name" required>
+                    </label>
+
+                    <label>
+                        Last Name <i>*</i>
+                        <input type="text" name="lastName" placeholder="Enter last name" required>
+                    </label>
+
+                    <label>
+                        Middle Name
+                        <input type="text" name="middleName" placeholder="Optional">
+                    </label>
+
+                    <label>
+                        Date of Birth <i>*</i>
+                        <input type="date" name="dob" required>
+                    </label>
+
+                    <label>
+                        Gender <i>*</i>
+                        <select name="gender" required>
+                            <option value="">Select gender</option>
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                            <option value="Prefer not to say">Prefer not to say</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Nationality <i>*</i>
+                        <input type="text" name="nationality" value="Nigerian" required>
+                    </label>
+
+                </div>
+
+                <h3><b>02</b> Admission Details</h3>
+
+                <div class="form-grid">
+
+                    <label>
+                        Applying for Class <i>*</i>
+                        <select name="classApplying" required>
+                            <option value="">Select class</option>
+                            <option>Creche</option>
+                            <option>Nursery 1</option>
+                            <option>Nursery 2</option>
+                            <option>Primary 1</option>
+                            <option>Primary 2</option>
+                            <option>Primary 3</option>
+                            <option>Primary 4</option>
+                            <option>Primary 5</option>
+                            <option>Primary 6</option>
+                            <option>JSS 1</option>
+                            <option>JSS 2</option>
+                            <option>JSS 3</option>
+                            <option>SSS 1</option>
+                            <option>SSS 2</option>
+                            <option>SSS 3</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Academic Session <i>*</i>
+                        <select name="session" required>
+                            <option value="2026/2027">2026/2027</option>
+                            <option value="2027/2028">2027/2028</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Previous School
+                        <input type="text" name="previousSchool" placeholder="Previous school, if any">
+                    </label>
+
+                    <label>
+                        Last Class Attended
+                        <input type="text" name="lastClass" placeholder="e.g. Primary 4">
+                    </label>
+
+                </div>
+
+                <h3><b>03</b> Parent / Guardian Information</h3>
+
+                <div class="form-grid">
+
+                    <label>
+                        Parent/Guardian Full Name <i>*</i>
+                        <input type="text" name="guardianName" placeholder="Enter full name" required>
+                    </label>
+
+                    <label>
+                        Relationship <i>*</i>
+                        <select name="relationship" required>
+                            <option value="">Choose relationship</option>
+                            <option>Mother</option>
+                            <option>Father</option>
+                            <option>Guardian</option>
+                            <option>Other</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Phone Number <i>*</i>
+                        <input type="tel" name="phone" placeholder="e.g. 08012345678" required>
+                    </label>
+
+                    <label>
+                        Email Address <i>*</i>
+                        <input type="email" name="email" placeholder="name@example.com" required>
+                    </label>
+
+                    <label class="full-width">
+                        Residential Address <i>*</i>
+                        <textarea name="address" rows="3" placeholder="Enter full residential address"
+                            required></textarea>
+                    </label>
+
+                    <label class="full-width">
+                        Additional Information
+                        <textarea name="notes" rows="3" placeholder="Optional information"></textarea>
+                    </label>
+
+                </div>
+
+                <label class="consent">
+                    <input type="checkbox" name="confirm" required>
+                    <span>
+                        I confirm that the information supplied is accurate
+                        to the best of my knowledge. <i>*</i>
+                    </span>
+                </label>
+
+                <p id="formMessage" class="message" role="status"></p>
+
+                <div class="form-actions">
+                    <button type="reset" class="secondary">
+                        Clear Form
+                    </button>
+
+                    <button type="submit" class="primary">
+                        Continue to Create Account →
+                    </button>
+                </div>
+
+                <p class="account-link">
+                    Already started?
+                    <a href="create-account.html">
+                        Create or access your application account
+                    </a>.
+                </p>
+
+            </form>
+        </section>
+
+        <aside class="requirements" id="requirements">
+            <div class="info-icon">i</div>
+            <div>
+                <strong>Before You Apply</strong>
+                <p>
+                    Keep the applicant's details and a working parent/guardian
+                    email address and phone number available. The school may
+                    request supporting documents during admission review.
+                </p>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer>
+        <span>© 2026 Wordsmith Academy</span>
+        <span>Admissions made simple.</span>
+    </footer>
+
+    <script>
+        const form = document.getElementById("applicationForm");
+        const message = document.getElementById("formMessage");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            message.textContent = "";
+            message.className = "message";
+
+            // Check that all required fields are completed
+            if (!form.checkValidity()) {
+                form.reportValidity();
+
+                message.textContent =
+                    "Please complete all required fields before continuing.";
+
+                message.classList.add("error");
+                return;
+            }
+
+            // Collect the application form data
+            const application = Object.fromEntries(
+                new FormData(form).entries()
+            );
+
+            // Temporary demo storage, not a permanent database
+            sessionStorage.setItem(
+                "wordsmithApplicationDraft",
+                JSON.stringify(application)
+            );
+
+            // Open the Create Application Account page
+            window.location.href = "create-account.html";
+        });
+
+        // Clear any previous message when the form is reset
+        form.addEventListener("reset", function () {
+            message.textContent = "";
+            message.className = "message";
+        });</script>
+</body>
+
+</html>
