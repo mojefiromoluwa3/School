@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Portal Login | Wordsmith Academy</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #eaf4ff, #f7f9fc);
+            display: flex;
+            flex-direction: column;
+            color: #263449;
+        }
+
+        header {
+            background: #12366b;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .school-name {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .school-name span {
+            color: #ffd166;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        header a:hover {
+            color: #ffd166;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 18px;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 430px;
+            background: white;
+            padding: 38px 32px;
+            border-radius: 16px;
+            box-shadow: 0 12px 35px rgba(18, 54, 107, 0.12);
+        }
+
+        .school-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            background: #eaf2ff;
+            color: #12366b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        h1 {
+            text-align: center;
+            color: #12366b;
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #34445b;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #d5deea;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+            background: #fcfdff;
+        }
+
+        input:focus {
+            border-color: #2463a9;
+            box-shadow: 0 0 0 3px rgba(36, 99, 169, 0.1);
+        }
+
+        .password-wrapper {
+            position: relative;
+        }
+
+        .password-wrapper input {
+            padding-right: 65px;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: none;
+            color: #2463a9;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 24px;
+            font-size: 13px;
+        }
+
+        .remember {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .remember label {
+            margin: 0;
+            font-weight: normal;
+        }
+
+        .form-options a,
+        .support a {
+            color: #2463a9;
+            text-decoration: none;
+        }
+
+        .form-options a:hover,
+        .support a:hover {
+            text-decoration: underline;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #12366b;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .login-button:hover {
+            background: #1d4f91;
+        }
+
+        .message {
+            display: none;
+            margin-top: 16px;
+            padding: 12px;
+            border-radius: 7px;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .support {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 13px;
+            color: #718096;
+            line-height: 1.8;
+        }
+
+        footer {
+            background: #12366b;
+            color: #e2eaf5;
+            text-align: center;
+            padding: 17px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 16px 5%;
+            }
+
+            .school-name {
+                font-size: 19px;
+            }
+
+            .login-container {
+                padding: 30px 22px;
+            }
+
+            h1 {
+                font-size: 23px;
+            }
+
+            .form-options {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="school-name">WORDSMITH <span>ACADEMY</span></div>
+        <a href="index.html">← Back to Home</a>
+    </header>
+
+    <main>
+        <section class="login-container">
+
+            <div class="school-icon">WA</div>
+
+            <h1>Staff Portal</h1>
+            <p class="subtitle">
+                Welcome back! Sign in with your staff credentials
+                to access the school portal.
+            </p>
+
+            <form id="staffLoginForm">
+
+                <div class="form-group">
+                    <label for="staffId">Staff ID or Email Address</label>
+                    <input type="text" id="staffId" name="staffId" placeholder="Enter your staff ID or email"
+                        autocomplete="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" placeholder="Enter your password"
+                            autocomplete="current-password" required>
+
+                        <button type="button" class="toggle-password" id="togglePassword"
+                            aria-label="Show password">Show</button>
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <div class="remember">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+
+                    <a href="forgot-password.html">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="login-button">
+                    Sign In to Staff Portal
+                </button>
+
+                <div id="message" class="message" role="status"></div>
+
+            </form>
+
+            <div class="support">
+                Having trouble signing in?<br>
+                Please contact the school administrator.
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        &copy; <span id="year"></span> Wordsmith Academy.
+        All rights reserved.
+    </footer>
+
+    <script>
+        const passwordInput = document.getElementById("password");
+        const togglePassword = document.getElementById("togglePassword");
+        const loginForm = document.getElementById("staffLoginForm");
+        const message = document.getElementById("message");
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        togglePassword.addEventListener("click", function () {
+            const isPassword = passwordInput.type === "password";
+
+            passwordInput.type = isPassword ? "text" : "password";
+            togglePassword.textContent = isPassword ? "Hide" : "Show";
+            togglePassword.setAttribute(
+                "aria-label",
+                isPassword ? "Hide password" : "Show password"
+            );
+        });
+
+        loginForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            message.style.display = "block";
+            message.style.background = "#fff4d6";
+            message.style.color = "#795500";
+
+            message.textContent =
+                "The login form is ready, but staff authentication " +
+                "has not been connected yet. Connect it to your " +
+                "Spring Boot backend to sign in securely.";
+        });
+    </script>
+
+</body>
+
+</html>
